@@ -2,44 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Utility Classes */
+.card {
+  @apply bg-white rounded-lg shadow p-6;
 }
 
 .btn {
-  @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  @apply px-4 py-2 rounded font-semibold transition-colors cursor-pointer border-none;
 }
 
 .btn-primary {
-  @apply btn bg-blue-600 text-white hover:bg-blue-700;
+  @apply bg-blue-600 text-white hover:bg-blue-700;
 }
 
 .btn-secondary {
-  @apply btn bg-gray-200 text-gray-800 hover:bg-gray-300;
+  @apply bg-gray-300 text-gray-800 hover:bg-gray-400;
 }
 
 .btn-danger {
-  @apply btn bg-red-600 text-white hover:bg-red-700;
-}
-
-.card {
-  @apply bg-white rounded-lg shadow-md p-6;
+  @apply bg-red-600 text-white hover:bg-red-700;
 }
 
 .input {
-  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600;
+  @apply w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600;
 }
 
 .table {
   @apply w-full border-collapse;
 }
 
-.table th {
-  @apply bg-gray-100 px-4 py-2 text-left font-semibold;
-}
-
-.table td {
-  @apply px-4 py-2 border-b border-gray-200;
+.table tbody tr:hover {
+  @apply bg-gray-50;
 }
